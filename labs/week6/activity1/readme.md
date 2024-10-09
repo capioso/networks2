@@ -13,8 +13,8 @@
 ## 1. Run and explain: nmap
 > Using nmap directly in the Windows console is the equivalent of using nmap -help, it is just a summary of how to use its services plus a description of what each action does, to see more details you can use the man command. 
 > 
-> ![](nmap1.png)
-> ![](nmap2.png)
+> ![](images/nmap1.png)
+> ![](images/nmap2.png)
 > 
 ## 2. Run and explain: metasploit
 ### 2.1. Initializing the database
@@ -44,10 +44,10 @@
 > 
 > Changing the entire file in: `C:\metasploit-framework\embedded\framework\lib\net\dns`
 > 
-> ![](mpt1.png)
+> ![](images/mpt1.png)
 > 
 ### 2.3. Setting up and running metasploit
 >  
-> ![](mpt2.png)
+> ![](images/mpt2.png)
 > 
-> ![](mpt3.png)
+> ![](images/mpt3.png)

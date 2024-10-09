@@ -12,8 +12,9 @@
 > * **Employees:** Network segment with client devices for employees and a file transfer service.
 > * **Public:** Network segment with devices that allow Internet access to employees.
 > 
-> ![](topology.png)
-
+> ![](images/topology.png)
+> 
+> CHECK THE `.pkt` file here: [activity2.pkt](activity2.pkt)
 ## Requirements
 > * Secure access to the router using a username and password. 
 > > * * **Enable**
@@ -22,7 +23,7 @@
 > > Router(config)# exit
 > > ```
 > > 
-> > ![](enable.png)
+> > ![](images/enable.png)
 >
 > > * * **VTY connections**
 > > ```shell
@@ -32,8 +33,8 @@
 > > Router(config-line)# exit
 > > ```
 > > 
-> > ![](vty1.png)
-> > ![](vty2.png)
+> > ![](images/vty1.png)
+> > ![](images/vty2.png)
 
 * Allow employees to access Internet services via HTTP, HTTPS protocols from the Public segment.
 
@@ -42,7 +43,7 @@
 > Router(config)# access-list 101 permit tcp 192.168.20.0 0.0.0.255 any eq 443
 > ```
 > 
-> ![](publicToEmployee.png)
+> ![](images/publicToEmployee.png)
 
 * Block any remote access request to the Management segment from the Public and Employee segments.
 
@@ -51,9 +52,9 @@
 > Router(config)# access-list 102 deny ip 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255
 > ```
 > 
-> ![](telnetFromPublicToManagement.png)
+> ![](images/telnetFromPublicToManagement.png)
 > 
-> ![](telnetFromEmployeeToManagement.png)
+> ![](images/telnetFromEmployeeToManagement.png)
 
 * Restrict file sharing service from the Employee segment to other segments. 
 
@@ -61,11 +62,11 @@
 > Router(config)# access-list 103 deny tcp any 192.168.20.0 0.0.0.255 eq 21
 > ```
 > 
-> ![](ftpFromEmployeeToPublic.png)
+> ![](images/ftpFromEmployeeToPublic.png)
 > 
-> ![](ftpFromEmployeeToManagement.png)
+> ![](images/ftpFromEmployeeToManagement.png)
 > 
-> ![](ftpFromEmployeeToEmployee.png)
+> ![](images/ftpFromEmployeeToEmployee.png)
 
 * Allow HTTP and HTTPS service access from the Management segment to the Employee and Public segments.
 
@@ -74,7 +75,7 @@
 > Router(config)# access-list 104 permit tcp 192.168.10.0 0.0.0.255 192.168.30.0 0.0.0.255 eq 80
 > ```
 > 
-> ![](dnsFromEmployeeToManagement.png)
+> ![](images/dnsFromEmployeeToManagement.png)
 > 
-> ![](dnsFromPublicToManagement.png)
+> ![](images/dnsFromPublicToManagement.png)
 

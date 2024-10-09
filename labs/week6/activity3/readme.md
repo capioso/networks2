@@ -39,39 +39,39 @@
 ## The server
 > I used the Ubuntu server created in Laboratory 2, plus adding a bridge interface to connect by ssh from my host:
 > 
-> ![](interfacesServer.png)
+> ![](images/interfacesServer.png)
 
 ## Apache Installation
 > I created a http server by using Apache inside Ubuntu Server:
 >
-> ![](installingApache.png)
+> ![](images/installingApache.png)
 >
 > And I used it from my host:
 >
-> ![](apacheWorking.png)
+> ![](images/apacheWorking.png)
 >
 > It is needed to mention that HTTP uses the port `80`, so keep it open on the firewall.
 
 ## Hyenae Installation
 > I had to create a directory to download Hyenae:
 > 
-> ![](downloadingHyenae.png)
+> ![](images/downloadingHyenae.png)
 > 
 > Then, I had to unpack the code:
 > 
-> ![](unpackingHyenae.png)
+> ![](images/unpackingHyenae.png)
 > 
 > I realized that there was a pkg directory, which I thought that was the right way to generate a deb package and directly use Hyenae:
 > 
-> ![](generatingDebPackage.png)
+> ![](images/generatingDebPackage.png)
 > 
 > I even changed the architecture for generating the deb package because the server architecture was amd64:
 > 
-> ![](architectureIssue.png)
+> ![](images/architectureIssue.png)
 > 
 > Finally, installing Hyenae and installing some needed packages:
 > 
-> ![](installingHyenae.png)
+> ![](images/installingHyenae.png)
 > 
 > But, I realized that the commands of Hyenae weren't available, so I had to generate the binaries to INSTALL hyenae:
 >
@@ -82,16 +82,16 @@
 > * After getting the MAKEFILE created, and checked with `dir` command, I could generate the needed binaries with `make`
 > * Finally installing with `sudo make install`
 > 
-> ![](lastStepsInstallation.png)
+> ![](images/lastStepsInstallation.png)
 >
 > Finally, checking Hyenae version (now the commands of Hyenae were available)
 > 
-> ![](hyenaeVersion.png)
+> ![](images/hyenaeVersion.png)
 
 ## Before DDOS attack
 > Using htop and netstat previous to the DDOS attack:
 >
-> ![](statusPrevAttack.png)
+> ![](images/statusPrevAttack.png)
 >
 > ```shell
 > capibara@capiososerver:~$ sudo netstat -an | grep ':80'
@@ -102,15 +102,15 @@
 ## Launching attack
 > Fortunately, Hyenae included a manual to know how to use it.
 > 
-> ![](launchingAttack.png)
+> ![](images/launchingAttack.png)
 >
 > I activated the attack for more than 15 seconds, at this point I realized that my machine was getting warmer.
 ## During DDOS attack
 > Using htop and netstat during the DDOS attack:
 > 
-> ![](statusDuringAttack.png)
+> ![](images/statusDuringAttack.png)
 > 
-> ![](portStatusDuringAttack.png)
+> ![](images/portStatusDuringAttack.png)
 
 ## Mitigation strategy
 > By following the advices from [Cypher](https://cypfer.com/what-can-my-organization-do-about-ddos-threats/). I got the following mitigation strategies.
